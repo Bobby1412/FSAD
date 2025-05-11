@@ -1,0 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Syne:regular,500,600,700,800);
+
+.container{
+  display: flex;
+  flex-direction: column;
+  height: 490px;
+  width: 400px;
+  align-items: center;
+  background-color: white;
+  margin-top: 4%;
+  margin-left: 34%;
+}
+.header{
+  margin: 30px 0 30px 0;
+}
+.text{
+  color: #0265cf;
+  font-family:Syne;
+  font-weight: 700;
+  font-size: 30px;
+}
+.inputs{
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0 0 0;
+  gap: 20px;
+}
+.input{
+  display: flex;
+  align-items: center;
+  width: 300px;
+  height: 45px;
+  background-color: #eaeaea;
+  border-radius: 6px;
+}
+.input input{
+   margin-left: 10px;
+   height: 40px;
+   width: 250px;
+   background:transparent;
+   border: none;
+   outline: none;
+}
+.input img{
+  margin-left: 10px;
+}
+.forgot{
+  font-size: 16px;
+  margin-right: 170px;
+  margin-top: 10px;
+  cursor: pointer;
+  color: #0265cf;
+}
+.buttons{
+  display: flex;
+  margin: 15px 30px 0 0;
+}
+.signup{
+  padding: 10px 8px 10px 8px;
+  background-color: #0265cf;
+  color: white;
+  margin: 15px 0 0 27px;
+  width: 290px; 
+  height: 40px;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: Syne;
+  border: none;
+  border-radius: 3px;
+}
+.buttons :hover{
+    background-color: black;
+    color: #0265cf;
+    border: solid 1.5px;
+    border-color: black;
+    cursor: pointer;
+}
+.already{
+    font-size: 16px;
+  margin-right: 70px;
+  margin-top: 25px;
+}
+.already a{
+    color: #0265cf;
+    cursor: pointer;
+}
+.login{
+  color: #0265cf;
+  cursor: pointer;
+}
