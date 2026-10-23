@@ -1,69 +1,39 @@
-import './style.css'
-import Client from './Pictures/Client.jpg'
-import Talent from './Pictures/talent-img.jpg'
-import Daimond from './Pictures/daimond.png'
-import Dollar from './Pictures/dollar.png'
-import Safe from './Pictures/safe.png'
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-
-
-function Home() {
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate('/login');
-  };
-
+export default function Home() {
   return (
-    <>  
-       <div class="Home-container">
-          <div class="header">
-                <div class=" titlediv">
-                  <h1 class="title"> ASSIRE </h1>
-                </div>
-            <div class="inputs">
-
-                <Link to="/" class="home">Home</Link>                
-                <Link to="/browse" class="BF">Browse Freelancers </Link>
-                <Link to="/post" class="PJ">Post a Job</Link>
-                <Link to="/contact" class="contact">Contact Us</Link>
-            </div>
-                <input class="searchbutton" placeholder="Search" type="text" />
-                <button class="button" onClick={handleClick} >Login/Signup</button>
+    <>
+      <section className="hero">
+        <div className="hero-copy">
+          <span className="eyebrow"><span className="eyebrow-dot" /> THE INDEPENDENT WORK MARKETPLACE</span>
+          <h1>Find your people.<br /><em>Make great work.</em></h1>
+          <p>Bring your next big idea to life with independent talent who care about getting it right.</p>
+          <div className="hero-actions">
+            <Link className="button" to="/browse">Explore talent <span aria-hidden="true">↗</span></Link>
+            <Link className="button button-light" to="/post">I’m hiring</Link>
           </div>
-                <hr  class="hr"/>
-
-          <div class="main" >
-                <div class="client"> 
-                    <img  class="client-pic" src={Client} />
-                    <div class="top-left">For Clients</div>
-                    <div class="center-left">Find Workforce Your Way</div>
-                    <div class="center-left-2">" Build your project with the largest nexus of professionals "</div>
-                    <div class="post-job"><p class="post"> Post a job  and Hire a pro</p> <p class="job">Marketplace &rarr;</p></div>
-                    <div class="buy-pro"><p class="buy">Browse and buy projects</p><p class="pro">Project Vault &rarr;</p></div>
-                    <div class="advice"><p class="adv">Get Advice from an Industry Expert</p><p class="ice"> Insights &rarr; </p> </div>
-                </div>
-                  <div class="why">
-                    <div class="us">Why choose <span class="name">Assire</span> ? </div>   
-                    <img src={Daimond} class="daimond-pic"/>
-                    <div class="TopLeft"> Excellence in work</div>
-                    <div class="TopLeft-2">Check client reviews,work samples and verified Identity. </div>
-                    <img src={Dollar} class="dollar-pic"/>
-                    <div class="CenterLeft">No pay until perfect</div> 
-                    <div class="CenterLeft-2">Interview freelancers across globe , negotiate cost and pay only when it’s perfect for you. </div>  
-                    <img src={Safe} class="safe-pic" />
-                    <div class="BottomLeft">Safe and Secure</div>
-                    <div class="BottomLeft-2">We are there for you to support 24/7.</div>             
-                  </div>
-          </div>
-                <hr class="hr" />
-          <div class="footer">
-                <p class="copy">© 2025 <span class="foott">Assire</span>  Marketplace</p>
-          </div>
-          </div>
+          <div className="hero-note"><span className="avatar-stack"><i>J</i><i>M</i><i>A</i></span><span>Thoughtful people. Better projects.</span></div>
+        </div>
+        <div className="hero-art" role="img" aria-label="Creative professionals collaborating">
+          <div className="hero-art-image" />
+          <div className="floating-card"><span className="floating-icon">✳</span><span><strong>Made for good work</strong><small>Talent and teams, together</small></span></div>
+          <div className="hero-sticker">LET’S<br />MAKE<br /><b>IT HAPPEN</b></div>
+        </div>
+      </section>
+      <section className="trust-strip">
+        <span>BUILDING BETTER, TOGETHER</span><b>Design</b><b>Development</b><b>Writing</b><b>Marketing</b><b>Strategy</b>
+      </section>
+      <section className="home-section">
+        <div className="section-heading">
+          <div><span className="eyebrow">YOUR NEXT CHAPTER STARTS HERE</span><h2>Work that works<br /><em>for everyone.</em></h2></div>
+          <p>Whether you’re building a team or building a career, find the people and projects that move you forward.</p>
+        </div>
+        <div className="path-cards">
+          <article className="path-card path-card-dark"><span className="card-number">01 / FOR CLIENTS</span><h3>Big idea?<br />Let’s build it.</h3><p>Find skilled freelancers who bring fresh thinking and real care to your project.</p><Link to="/post">Post a project <span>↗</span></Link></article>
+          <article className="path-card path-card-orange"><span className="card-number">02 / FOR FREELANCERS</span><h3>Your talent<br />deserves a stage.</h3><p>Meet thoughtful clients, discover meaningful projects, and do work you’re proud of.</p><Link to="/browse">Find your next project <span>↗</span></Link></article>
+          <article className="path-card path-card-cream"><span className="card-number">03 / MADE TOGETHER</span><h3>Better work<br />starts with trust.</h3><p>Clear expectations, real conversations, and a community that values quality.</p><Link to="/contact">Get to know us <span>↗</span></Link></article>
+        </div>
+      </section>
     </>
-  )
+  );
 }
-
-export default Home
